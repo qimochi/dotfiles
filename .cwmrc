@@ -1,0 +1,112 @@
+##########
+# .cwmrc #
+##########
+
+
+## settings
+borderwidth 0
+snapdist 10
+gap 10 10 10 10
+sticky yes
+snapdist 4
+unbind-key all
+moveamount 10
+fontname "JetBrainsMono Nerd Font:size=9"
+
+
+## execs
+bind-key 4-Return       "urxvt"
+bind-key 4S-Return      "urxvt -e tmux"
+bind-key M-Return       "st"
+bind-key 4-a            "thunar"
+bind-key 4-s            "mousepad"
+bind-key 4-f            "firefox"
+
+bind-key Print          "screenshot.sh --full"
+bind-key S-Print        "scrot '/tmp/tmpp.png' -e 'xclip -selection clipboard -target image/png -i $f'"
+bind-key C-Print        "scrot -q 100 ~/img.png"
+
+bind-key 4-d           "bmenu"
+bind-key 4-comma        menu-cmd
+
+## groups
+bind-key 4-1 group-only-1
+bind-key 4-2 group-only-2
+bind-key 4-3 group-only-3
+bind-key 4-8 group-only-4
+bind-key 4-9 group-only-5
+bind-key 4-0 group-only-6
+bind-key 4S-1 window-movetogroup-1
+bind-key 4S-2 window-movetogroup-2
+bind-key 4S-3 window-movetogroup-3
+bind-key 4S-8 window-movetogroup-4
+bind-key 4S-9 window-movetogroup-5
+bind-key 4S-0 window-movetogroup-6
+
+
+## keybinds
+bind-key M-Tab      window-cycle
+bind-key 4-Tab      group-cycle
+
+bind-key 4-f        window-maximize
+bind-key 4-space    window-fullscreen
+bind-key 4-o        window-snap-left
+bind-key 4-p        window-snap-right 
+bind-key 4S-q       window-close
+
+bind-key 4S-b       window-vmaximize
+bind-key 4S-r       restart
+bind-key 4S-e       quit
+
+
+## speed 
+bind-key 4S-h window-resize-left
+bind-key 4S-j window-resize-down
+bind-key 4S-k window-resize-up
+bind-key 4S-l window-resize-right
+bind-key 4-h window-move-left-big
+bind-key 4-j window-move-down-big
+bind-key 4-k window-move-up-big
+bind-key 4-l window-move-right-big
+
+
+## mousebinds
+unbind-mouse all
+
+bind-mouse M-1 window-resize
+bind-mouse 4S-1 window-resize
+bind-mouse 4-1 window-move
+bind-mouse 4-2 window-lower
+
+
+## colors
+color menufg        "#f0f0f0"
+color menubg        "#0f0f0f"
+color font          "#f0f0f0"
+color selfont       "#0f0f0f"
+
+color activeborder  "#f0f0f0"
+color inactiveborder"#0f0f0f"
+
+
+## volume and stuff
+bind-key XF86AudioLowerVolume "/usr/bin/pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bind-key XF86AudioRaiseVolume "/usr/bin/pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bind-key XF86AudioMute "/usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bind-key XF86MonBrightnessUp "/bin/xbacklight -inc 10"
+bind-key XF86MonBrightnessDown "/bin/xbacklight -dec 10"
+
+
+## spawen
+autogroup	2 	"Firefox"
+autogroup	2 	"Firefox-esr"
+autogroup	3 	"zathura"
+
+
+## commands
+command mcv         "urxvt -e mpv --loop-playlist --shuffle /home/xx/Music/"
+command lofi        "urxvt -e mpv --loop-playlist --shuffle /home/xx/Music/"
+command top         "urxvt -e gotop"
+command firefox        "firefox"
+command thunar         "gksu thunar"
+command notes          "mousepad"
