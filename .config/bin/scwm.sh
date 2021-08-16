@@ -3,7 +3,7 @@
 # kill wm session with Ctrl + Alt + Backspace
 # setxkbmap -option terminate:ctrl_alt_bksp
 
-xrdb -merge /home/xx/.Xresources
+xrdb -merge ~/.Xresources
 xset b off
 xset r rate 250 25
 nitrogen --restore &
@@ -16,7 +16,7 @@ dunst & # notification daemon
 #sxhkd & # keyboard shortcut daemon
 #xautolock -time 10 -locker "slock" & 
 picom &
-VBoxClient --clipboard &
+VBoxClient --clipboard & #virtualbox 
 mpd &
 
 # start cwm
