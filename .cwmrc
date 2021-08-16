@@ -11,7 +11,7 @@ fontname "JetBrainsMono Nerd Font:size=9"
 
 ## execs
 bind-key 4-Return       "urxvt"
-bind-key 4S-Return      "urxvt -e tmux"
+bind-key 4S-Return      "urxvt -e vim"
 bind-key M-Return       "st"
 bind-key 4-a            "thunar"
 bind-key 4-s            "mousepad"
@@ -52,7 +52,7 @@ bind-key 4S-r       restart
 bind-key 4S-e       quit
 
 
-## speed 
+## resize
 bind-key 4S-h window-resize-left
 bind-key 4S-j window-resize-down
 bind-key 4S-k window-resize-up
@@ -82,7 +82,7 @@ color activeborder  "#f0f0f0"
 color inactiveborder"#0f0f0f"
 
 
-## volume and stuff
+## vol
 bind-key XF86AudioLowerVolume "/usr/bin/pactl set-sink-volume @DEFAULT_SINK@ -5%"
 bind-key XF86AudioRaiseVolume "/usr/bin/pactl set-sink-volume @DEFAULT_SINK@ +5%"
 bind-key XF86AudioMute "/usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle"
@@ -90,7 +90,7 @@ bind-key XF86MonBrightnessUp "/bin/xbacklight -inc 10"
 bind-key XF86MonBrightnessDown "/bin/xbacklight -dec 10"
 
 
-## spawen
+## launch it
 autogroup	2 	"Firefox"
 autogroup	3 	"zathura"
 
