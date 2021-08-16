@@ -1,8 +1,3 @@
-##########
-# .cwmrc #
-##########
-
-
 ## settings
 borderwidth 0
 snapdist 10
@@ -23,8 +18,6 @@ bind-key 4-s            "mousepad"
 bind-key 4-f            "firefox"
 
 bind-key Print          "screenshot.sh --full"
-bind-key S-Print        "scrot '/tmp/tmpp.png' -e 'xclip -selection clipboard -target image/png -i $f'"
-bind-key C-Print        "scrot -q 100 ~/img.png"
 
 bind-key 4-d           "bmenu"
 bind-key 4-comma        menu-cmd
@@ -99,14 +92,10 @@ bind-key XF86MonBrightnessDown "/bin/xbacklight -dec 10"
 
 ## spawen
 autogroup	2 	"Firefox"
-autogroup	2 	"Firefox-esr"
 autogroup	3 	"zathura"
 
 
 ## commands
-command mcv         "urxvt -e mpv --loop-playlist --shuffle /home/xx/Music/"
-command lofi        "urxvt -e mpv --loop-playlist --shuffle /home/xx/Music/"
-command top         "urxvt -e gotop"
 command firefox        "firefox"
 command thunar         "gksu thunar"
 command notes          "mousepad"
