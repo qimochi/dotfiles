@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/xx/Pictures/Wallpaper/blue.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#1e281e",
+        "foreground": "#dcddcf",
+        "cursor": "#dcddcf"
+    },
+    "colors": {
+        "color0": "#1e281e",
+        "color1": "#699599",
+        "color2": "#6D9BA5",
+        "color3": "#78A6AB",
+        "color4": "#7FA9C1",
+        "color5": "#A3AF93",
+        "color6": "#87AFB3",
+        "color7": "#dcddcf",
+        "color8": "#9a9a90",
+        "color9": "#699599",
+        "color10": "#6D9BA5",
+        "color11": "#78A6AB",
+        "color12": "#7FA9C1",
+        "color13": "#A3AF93",
+        "color14": "#87AFB3",
+        "color15": "#dcddcf"
+    }
+}
