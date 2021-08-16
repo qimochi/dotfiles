@@ -1,0 +1,28 @@
+[player]
+music_directory = ~/Music
+font_width      = 11
+font_height     = 24
+image_method    = ueberzug
+volume_step     = 5
+auto_close      = false
+album_art_only  = false
+show_playlist   = false
+
+
+[mpd]
+host   = 127.0.0.1
+port   = 6600
+# pass = example
+
+[keybindings]
+>     = next_track
+<     = last_track
++     = volume_up
+-     = volume_down
+p     = play_pause
+q     = quit
+h     = help
+i     = toggle_info
+up    = select_up
+down  = select_down
+enter = select

@@ -1,0 +1,105 @@
+
+#define FG #b9b9b9
+#define BG #161616
+#define BL #443a36
+#define WH #867564
+#define R #7c7c7c
+#define G #8e8e8e
+#define Y #a0a0a0
+#define B #686868
+#define M #747474
+#define C #868686
+
+! URxvt Configuration
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.font: xft:FiraCode:size=10,xft:Noto Color Emoji:pixelsize=12:antialias=false,xft:blobmoji:size=11:autohint=true
+URxvt.internalBorder: 20
+URxvt.scrollBar: false
+URxvt.scrollBar_right: true
+URxvt.scrollBar_floating: false
+URxvt.scrollstyle: plain
+URxvt.letterSpace: 0
+URxvt.geometry: 44x30
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: true
+URxvt.scrollWithBuffer: false
+URxvt.urgentOnBell: false
+URxvt.depth: 32
+URxvt.iso14755: false
+
+! URxvt Extensions
+URxvt.perl-ext-common: default,url-select
+URxvt.keysym.Control-Up: eval:scroll_up 1
+URxvt.keysym.Control-Down: eval:scroll_down 1
+URxvt.keysym.Control-Home: eval:scroll_to_top
+URxvt.keysym.Control-End: eval:scroll_to_bottom
+
+
+! URL Select Ext
+URxvt.keysym.Control-Shift-U: url-select:select_next
+URvxt.url-select.button: 2
+URxvt.url-select.launcher: firefox
+URxvt.url-select.underline: true
+
+! special
+*.foreground:   FG
+*.background:   BG
+*.cursorColor:  FG
+
+! black
+*.color0:       BG
+*.color8:       BG
+
+! red
+*.color1:       R
+*.color9:       R
+
+! green
+*.color2:       G
+*.color10:      G
+
+! yellow
+*.color3:       Y
+*.color11:      Y
+
+! blue
+*.color4:       B
+*.color12:      B
+
+! magenta
+*.color5:       M
+*.color13:      M
+
+! cyan
+*.color6:       C
+*.color14:      C
+
+! white
+*.color7:       FG
+*.color15:      FG
+
+! dmenu variables
+
+dmenu.font: FiraCode
+dmenu.background: #161616
+dmenu.foreground: #707070
+dmenu.selbackground: #161616
+dmenu.selforeground: #f2f2f2
+
+
+!-- Xft settings -- !
+Xft.antialias:	1
+Xft.hinting:	1
+Xft.autohint:	0
+Xft.hintstyle:	hintslight
+Xft.rgba:	rgba
+Xft.lcdfilter:	lcddefault
+Xft.dpi:   96
+
+st.font:         JetBrainsMono Nerd Font:style:medium:pixelsize=12
+
+! window border inner
+st.opacity: 255
+st.borderpx: 25
