@@ -26,3 +26,5 @@ i     = toggle_info
 up    = select_up
 down  = select_down
 enter = select
+
+## https://aur.archlinux.org/packages/miniplayer-git/
