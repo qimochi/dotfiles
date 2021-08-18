@@ -1,0 +1,29 @@
+conky.config = {
+    alignment = 'br',
+    background = false,
+    default_color = 'FFFFFF',
+    default_outline_color = 'FFFFFF',
+    default_shade_color = 'FFFFFF',
+    color1 = 'FFFFFF',
+    draw_shades = false,
+    use_xft = true,
+    font = 'Inconsolata:size=11',
+    gap_x = 30,
+    gap_y = 50,
+    minimum_height = 100,
+    minimum_width = 350,
+    own_window = false,
+    own_window_class = 'ConkySpotify',
+    own_window_type = 'desktop',
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    update_interval = 1.0
+}
+
+conky.text = [[
+${if_running spotify}${voffset 10}${offset 5}${color1}${font Inconsolata:bold:size=8}Spotify (${exec ~/.conky/scripts/status.sh})
+${offset 5}${color}${voffset 7}${font Inconsolata:bold:size=11}${exec ~/.conky/scripts/title.sh}
+${voffset 4}${offset 5}${color1}${font Inconsolata:bold:size=8}By ${exec ~/.conky/scripts/artist.sh}
+${offset 5}${voffset 5}${exec ~/.conky/scripts/album.sh}
+${exec ~/.conky/conky-spotify/scripts/cover.sh}${image ~/.conky/current/current.jpeg -p 260,10 -s 80x80 -n}${endif}
+]]
