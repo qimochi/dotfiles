@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# colors and palette method stolen from dylanaraps pfetch
+# https://github.com/dylanaraps/pfetch
+
+c0='[0m';
+c1='[31m'; c2='[32m'
+c3='[33m'; c4='[34m'
+c5='[35m'; c6='[36m'
+c7='[37m'; c8='[38m'
+palette="[7m$c1 $c1 $c1 $c1 $c2 $c2 $c2 $c2 $c3 $c3 $c3 $c3 $c4 $c4 $c4 $c4 $c5 $c5 $c5 $c5 $c6 $c6 $c6 $c6 [m"
+white="[7m$c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 $c7 [m"
+
+# output
+    printf "
+${palette}
+${palette}
+${white}
+
+"
