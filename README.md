@@ -1,3 +1,3 @@
 🤧 just current backup 
 
-![Image](https://github.com/qimochi/dotfiles/blob/main/2021-08-16-224625_maim.png)
+![Image](https://github.com/qimochi/dotfiles/blob/main/1.png)
