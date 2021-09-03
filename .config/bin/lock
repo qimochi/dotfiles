@@ -1,0 +1,36 @@
+#!/bin/bash
+
+BLANK='#00000000'
+CLEAR='#ffffff22'
+DEFAULT='#ff00ffcc'
+TEXT='#f2f2f2f2'
+WRONG='#880000bb'
+VERIFYING='#bb00bbbb'
+
+i3lock \
+--insidever-color=$BLANK     \
+--ringver-color=$BLANK   \
+\
+--insidewrong-color=$CLEAR   \
+--ringwrong-color=$CLEAR     \
+\
+--inside-color=$BLANK        \
+--ring-color=$BLANK        \
+--line-color=$BLANK          \
+--separator-color=$CLEAR   \
+\
+--verif-color=$BLANK          \
+--wrong-color=$BLANK          \
+--time-color=$TEXT           \
+--date-color=$TEXT           \
+--layout-color=$BLANK         \
+--keyhl-color=$BLANK         \
+--bshl-color=$BLANK          \
+\
+--screen 1                   \
+--blur 5                     \
+--clock                      \
+--indicator                  \
+--time-str="%H:%M:%S"        \
+--date-str="%A, %m %Y"       \
+--keylayout 1                \
