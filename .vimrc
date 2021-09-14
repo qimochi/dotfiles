@@ -8,7 +8,6 @@ Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug '~/my-prototype-plugin'
 Plug 'dylanaraps/wal.vim'
 Plug 'fehawen/sl.vim'
 Plug 'fehawen/sc.vim'
