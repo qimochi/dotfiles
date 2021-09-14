@@ -49,14 +49,6 @@ set fish_pager_color_description yellow
 set fish_pager_color_prefix cyan
 set fish_pager_color_progress cyan
 
-## Aliases
-alias ls "ls --group-directories-first"
-alias lsl "ls --group-directories-first -lh"
-alias version "apt-cache show"
-alias font-refresh "fc-cache -fv"
-alias clone "git clone --depth 1"
-alias merge "xrdb ~/.Xresources"
-
 
 ## Keybinding
 set fish_key_bindings fish_default_key_bindings
