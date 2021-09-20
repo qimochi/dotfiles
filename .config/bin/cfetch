@@ -1,0 +1,109 @@
+#!/bin/bash
+
+#basic things by https://github.com/dylanaraps/pfetch
+
+c1="\033[1;30m"
+c2="\033[1;31m"
+c3="\033[1;32m"
+c4="\033[1;33m"
+c5="\033[1;34m"
+c6="\033[1;35m"
+c7="\033[1;36m"
+c8="\033[1;37m"
+end="\033[1;0m"
+
+e1="dist"
+e2="krnl"
+e3="init"
+e4="shll"
+e5="winm"
+
+distro=$(cat /etc/os-release | grep ID | awk -F= '{ print $2 }' | head -1)
+kernel=$(uname -r)
+  read -r _ _ version _ < /proc/version
+  ke=${version%%-*}
+
+get_init() {
+    os="$(uname -o)"
+    if [[ "$os" = "Android" ]]; then
+       echo "init.rc"
+    elif [[ ! $(pidof systemd) ]]; then
+        if [[ -f "/sbin/openrc" ]]; then
+            echo "openrc"
+        else
+         echo $(cat /proc/1/comm)
+        fi
+    else
+        echo "systemD"
+    fi
+}
+
+#sing by https://github.com/Manas140/sh :D
+sing() {
+red="\033[1;31m"
+green="\033[1;32m"
+yellow="\033[1;33m"
+blue="\033[1;34m"
+magenta="\033[1;35m"
+cyan="\033[1;36m"
+white="\033[1;37m"
+end="\033[1;0m"
+colors=($red $green $yellow $blue $magenta $cyan $white)
+seed=${#colors[@]}
+
+text="$@"
+
+chars=$( printf "$text\n" | grep -o . | sed 's/ /~~/g')
+for char in ${chars[@]}; do
+  color=$(($RANDOM%${seed}))
+  printf "${colors[$color]}" 
+  printf "$char" | sed 's/~~/ /g'
+done
+printf " \n"
+}
+
+if [ -z "${WM}" ]; then
+	if [ "${XDG_CURRENT_DESKTOP}" ]; then
+		envtype='WM'
+		WM="${XDG_CURRENT_DESKTOP}"
+	elif [ "${DESKTOP_SESSION}" ]; then
+		envtype='WM'
+		WM="${DESKTOP_SESSION}"
+	else
+		envtype='WM'
+		WM="$(tail -n 1 "${HOME}/.xinitrc" | cut -d ' ' -f 2)"
+	fi
+else
+	envtype='WM'
+fi
+SHELL="$(basename ${SHELL})"
+
+palette=" $c2  $c3  $c4  $c5  $c6"
+
+#display
+
+art="
+\\033c\\033[31m  .--.---.
+ ( \\'--'/ )
+( '..-...' )
+ '.'-._.'.'
+ \\033[34m <'-.,.->
+     \`\\(   _
+     < \\ / \\
+     __ \\\\|_/
+    /  \\ \\\\
+     '--'.\\ >
+           \\\\\\033[0m
+"
+
+printf "$art"
+echo " "
+echo -e " $(sing $e1 )- $(sing $distro)"
+echo -e " $(sing $e2 )- $(sing ${ke})"
+echo -e " $(sing $e3 )- $(sing $(get_init))"
+echo -e " $(sing $e4 )- $(sing ${SHELL})"
+echo -e " $(sing $e5 )- $(sing ${WM})"
+printf "
+${palette}
+
+" 
